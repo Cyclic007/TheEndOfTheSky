@@ -1,4 +1,35 @@
 from time import sleep
+hp = 100
+damage = 4
+inventory = ['Wood Sword', 'Small Health Potion']
+def fight(number):
+  if number == 1:
+    enemy1_hp = 10
+    enemy1_damage = 1
+    enemy2_hp = 10
+    enemy1_damage = 1
+    enemy3_hp = 10
+    enemy1_damage = 1
+    print('')
+    if enemy1_hp =< 0 and enemy2_hp =< 0 enemy3_hp =< 0:
+      print('')
+  elif number == 2:
+    enemy1_hp = 20
+    enemy2_hp = 25
+    print('')
+  elif number == 3:
+    enemy1_hp = 40
+    print('')
+  elif number == 4:
+    enemy1_hp = 65
+    print('')
+  elif number == 5:
+    enemy1_hp = 90
+    print('')
+  else:
+    print('Error!')
+def commands(command):
+  if command == 'exit':
 print('Bartender- Welcome to my tavern! You must have come a long way.')
 sleep(1)
 one = input(
@@ -30,3 +61,14 @@ print("The door bursts open and three bandits run in.")
 print('Bandit 1- Everyone put your hands up!')
 sleep(1)
 print('Bandit 2- Search them')
+print('The bandits walk in and shove over the patrens.')
+sleep(1)
+print('They walk right past you, pockets filled with gold.')
+sleep(1)
+four = input('Do you attack? y/n')
+if four == 'y':
+  print()
+elif four == 'n':
+  print()
+else:
+  print('Please follow instructions. You will attack. Happy now?')

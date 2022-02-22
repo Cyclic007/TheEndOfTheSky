@@ -68,8 +68,13 @@ print('They walk right past you, pockets filled with gold.')
 sleep(1)
 four = input('Do you attack? y/n: ')
 if four == 'y':
-  print()
+  fight(1)
 elif four == 'n':
-  print()
+  print('You hide under the table, waiting for them to pass.')
+  sleep(1)
+  print('Bandit 2- Hey! I found one under here.')
+  print('The bandit points to you. Time to fight!')
+  fight(1)
 else:
   print('Please follow instructions. You will attack. Happy now? ')
+  fight(1)

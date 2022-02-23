@@ -60,10 +60,10 @@ two = input(
     'Person- I have not seen you around here. Are you new to these parts?[y/n] ')
 if two == 'y':
   cls()
-  print("I do not like attention. Stay off my back")
+  print("First off, welcome. Second, for the record I loath attention. Stay off my back")
 if two == 'n':
   cls()
-  print("Huh, thats interesting... Also if you didnt know already, I very much dislike attention, so stay off my back.")
+  print("Huh, thats interesting... Also if you didnt know already, I loath attention, so stay off my back.")
 sleep(1.5)
 print('He walks back to his table.')
 three = input('Do you follow him? y/n: ')

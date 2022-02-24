@@ -2,7 +2,11 @@ from time import sleep
 import os
 hp = 100
 damage = 4
-inventory = ['Wood Sword', 'Small Health Potion']
+inventory = {
+'weapons': ['Wood Sword': ]
+'potions': ['Small Health Potion']
+}
+gold = 50
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 def fight(number):
@@ -15,7 +19,9 @@ def fight(number):
     enemy1_damage = 1
     print('')
     if enemy1_hp <= 0 and enemy2_hp <= 0 and enemy3_hp <= 0:
-      print('')
+      print('You won!')
+      sucess = 1
+      return sucess
   elif number == 2:
     enemy1_hp = 20
     enemy2_hp = 25
@@ -31,9 +37,6 @@ def fight(number):
     print('')
   else:
     print('Error!')
-def commands(command):
-  if command == 'exit':
-    exit()
 print('Bartender- Welcome to my tavern! You must have come a long way.')
 sleep(1.5)
 one = input(
@@ -95,3 +98,4 @@ elif four == 'n':
 else:
   print('Please follow instructions. You will attack. Happy now? ')
   fight(1)
+  if 

@@ -14,3 +14,9 @@
 "You mean like from the 90's?"
 
 "Yes, now play or I will crash your computer."
+
+"How would you crash my computer?"
+
+"You don't know everything about me."
+
+"Fine, I'll play the game."

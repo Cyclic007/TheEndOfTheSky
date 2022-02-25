@@ -1,10 +1,12 @@
 from time import sleep
 import os
+list1 = [1, 2, 3]
 hp = 100
 damage = 4
 inventory = {
-'weapons': ['Wood Sword': ]
-'potions': ['Small Health Potion']
+  'weapons': ['Wood Sword'],
+  'potions': ['Small Health Potion'],
+  'armor': ['Cloth']
 }
 gold = 50
 def cls():
@@ -14,18 +16,35 @@ def fight(number):
     enemy1_hp = 10
     enemy1_damage = 1
     enemy2_hp = 10
-    enemy1_damage = 1
+    enemy2_damage = 1
     enemy3_hp = 10
-    enemy1_damage = 1
-    print('')
-    if enemy1_hp <= 0 and enemy2_hp <= 0 and enemy3_hp <= 0:
+    enemy3_damage = 1
+    while enemy1_hp <= 0 and enemy2_hp <= 0 and enemy3_hp <= 0:
+      target = input('Who do you attack? (1/2/3)')
+      print('You attack '+target+ 'for ' +damage+'damage.')
+      if target == '1':
+        if enemy1_hp >= 1:
+          enemy1_hp = enemy1_hp - damage
+        else:
+          print('1 is already dead.')
+      if target == '2':
+        if enemy2_hp >= 1:
+          enemy2_hp = enemy2_hp - damage
+        else:
+          print('2 is already dead.')
+      if target == '3':
+        if enemy3_hp >= 1:
+          enemy3_hp = enemy3_hp - damage
+        else:
+          print('3 is already dead.')
       print('You won!')
-      sucess = 1
-      return sucess
+      success = 1
+      return success
   elif number == 2:
     enemy1_hp = 20
+    enemy1_damage = list1[randrange(2)]
     enemy2_hp = 25
-    print('')
+    enemy2_damage = list1[randrange(2)]
   elif number == 3:
     enemy1_hp = 40
     print('')
@@ -52,7 +71,12 @@ elif one != '1' and one != '2':
     cls()
     one = input(
     'Bartender- We do not have that. Would you like something else to drink? We have water and milk! 1-water 2-milk: ')
-    if one == '1' or one == '2':
+    if one == '1':
+      print('Bartender- Ok! One water coming right up!')
+    elif one == '2':
+      print("Bartender- Ok! One milk coming right up!")
+    else:
+      print('Bartender- Never mind.')
       break
 sleep(1.5)
 cls()
@@ -81,7 +105,7 @@ print("The door bursts open and three bandits run in.")
 print('Bandit 1- Everyone put your hands up!')
 sleep(1.5)
 print('Bandit 2- Search them')
-print('The bandits walk in and shove over the patrens.')
+print('The bandits walk in and shove over the patrons.')
 sleep(1.5)
 print('They walk right past you, pockets filled with gold.')
 sleep(1.5)
@@ -98,4 +122,5 @@ elif four == 'n':
 else:
   print('Please follow instructions. You will attack. Happy now? ')
   fight(1)
-  if 
+if success == 1:
+  print('You won!')

@@ -8,17 +8,21 @@ inventory = {
   'potions': ['Small Health Potion'],
   'armor': ['Cloth']
 }
+if 'armor' == ['Cloth']:
+  enemy1_damage = enemy1_damage - 1
+  enemy2_damage = enemy2_damage - 1
+  enemy3_damage = enemy3_damage - 1
 gold = 50
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 def fight(number):
   if number == 1:
     enemy1_hp = 10
-    enemy1_damage = 1
+    enemy1_damage = 2
     enemy2_hp = 10
-    enemy2_damage = 1
+    enemy2_damage = 2
     enemy3_hp = 10
-    enemy3_damage = 1
+    enemy3_damage = 2
     while enemy1_hp <= 0 and enemy2_hp <= 0 and enemy3_hp <= 0:
       target = input('Who do you attack? (1/2/3)')
       print('You attack '+target+ 'for ' +damage+'damage.')

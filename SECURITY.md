@@ -11,4 +11,4 @@ At no time can this code be copied or plagerized in any way, form, or function.
 
 ## Reporting a Vulnerability
 
-If you find **any** valurabilitys, please contact us at wikipenguin@gmail.com.
+If you find **any** vulnerabilities, please contact us at wikipenguin@gmail.com.

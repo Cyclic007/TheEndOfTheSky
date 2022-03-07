@@ -5,3 +5,5 @@ elif a == "gui":
   import gui.py
 elif a == "commands":
   import commands.py
+elif a == "admin":
+  print ("There is no admin, you fool!")

@@ -1,6 +1,7 @@
 { pkgs }: {
     deps = [
-        pkgs.python38Full.outpipp
+      # It is unable to find output, delete comment when fixed.
+        pkgs.python38Full.output
         pkgs.java8
         pkgs.adoptopenjdk-hotspot-bin-16
     ];

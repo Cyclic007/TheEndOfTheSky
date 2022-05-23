@@ -2,17 +2,16 @@ from time import sleep
 import os
 list1 = [1, 2, 3]
 hp = 100
+global hp
 damage = 4
 inventory = {
   'weapons': ['Wood Sword'],
   'potions': ['Small Health Potion'],
   'armor': ['Cloth']
 }
-if 'armor' == ['Cloth']:
-  enemy1_damage = enemy1_damage - 1
-  enemy2_damage = enemy2_damage - 1
-  enemy3_damage = enemy3_damage - 1
+global inventory
 gold = 50
+global gold
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 def fight(number):
@@ -23,6 +22,10 @@ def fight(number):
     enemy2_damage = 2
     enemy3_hp = 10
     enemy3_damage = 2
+    if 'armor' == ['Cloth']:
+      enemy1_damage = enemy1_damage - 1
+      enemy2_damage = enemy2_damage - 1
+      enemy3_damage = enemy3_damage - 1
     while enemy1_hp <= 0 and enemy2_hp <= 0 and enemy3_hp <= 0:
       target = input('Who do you attack? (1/2/3)')
       print('You attack '+target+ 'for ' +damage+'damage.')
@@ -128,3 +131,5 @@ else:
   fight(1)
 if success == 1:
   print('You won!')
+else:
+  print('What did you do wrong...')

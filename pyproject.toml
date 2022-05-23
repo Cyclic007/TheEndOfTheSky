@@ -2,7 +2,7 @@
 name = "python-template"
 version = "0.1.0"
 description = ""
-authors = ["Emmett Armstrong <emmettla@madiosncity.k12.al.us>, Wyatt _______ <email@eaxmple.com>, Liam _________ <email@example.com>"]
+authors = ["Emmett Armstrong <emmettla@madiosncity.k12.al.us>, Wyatt _______ <wyattfp@madisoncity.k12.al.us>, Liam Shelley <liamts@madisoncity.k12.al.us>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8.0,<3.9"

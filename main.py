@@ -1,6 +1,6 @@
 from time import sleep
 import os
-list1 = [1, 2, 3]
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 hp = 100
 global hp
 damage = 4
@@ -52,15 +52,54 @@ def fight(number):
     enemy1_damage = list1[randrange(2)]
     enemy2_hp = 25
     enemy2_damage = list1[randrange(2)]
+    if 'armor' == ['Cloth']:
+      enemy1_damage = enemy1_damage - 1
+      enemy2_damage = enemy2_damage - 1
+    while enemy1_hp <= 0 and enemy2_hp <= 0:
+      target = input('Who do you attack? (1/2)')
+      print('You attack '+target+ 'for ' +damage+'damage.')
+      if target == '1':
+        if enemy1_hp >= 1:
+          enemy1_hp = enemy1_hp - damage
+        else:
+          print('1 is already dead.')
+      if target == '2':
+        if enemy2_hp >= 1:
+          enemy2_hp = enemy2_hp - damage
+        else:
+          print('2 is already dead.')
+      print('You won!')
+      success = 1
   elif number == 3:
     enemy1_hp = 40
-    print('')
+    enemy1_damage = list1[randrange(5)]
+    if 'armor' == ['Cloth']:
+      enemy1_damage = enemy1_damage - 1
+    while enemy1_hp <= 0:
+      enemy1_hp = enemy1_hp - damage
+    else:
+      print('You Won!')
+      success = 1
   elif number == 4:
     enemy1_hp = 65
-    print('')
+    enemy1_damage = list1[randrange(7)]
+    if 'armor' == ['Cloth']:
+      enemy1_damage = enemy1_damage - 1
+    while enemy1_hp <= 0:
+      enemy1_hp = enemy1_hp - damage
+    else:
+      print('You Won!')
+      success = 1
   elif number == 5:
     enemy1_hp = 90
-    print('')
+    enemy1_damage = list1[randrange(9)]
+    if 'armor' == ['Cloth']:
+      enemy1_damage = enemy1_damage - 1
+    while enemy1_hp <= 0:
+      enemy1_hp = enemy1_hp - damage
+    else:
+      print('You Won!')
+      success = 1
   else:
     print('Error!')
 print('Bartender- Welcome to my tavern! You must have come a long way.')

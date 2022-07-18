@@ -14,7 +14,11 @@ def shop(type):
   if purchase == 1:
     gold = gold - 15
     inventory["weapon"] = "Bow and Arrows"
-    arrows = 15
+    arrows = arrows + 10
+    global arrows
+  if purchase == 1:
+    gold = gold - 10
+    arrows = arrows + 15
     global arrows
 def commands(command):
   if command == 'exit':

@@ -23,25 +23,34 @@ def fight(number):
     enemy3_hp = 10
     enemy3_damage = 2
     if 'armor' == ['Cloth']:
-      enemy1_damage = enemy1_damage - 1
-      enemy2_damage = enemy2_damage - 1
-      enemy3_damage = enemy3_damage - 1
+      enemy1_damage -= 1
+      enemy2_damage -= 1
+      enemy3_damage -= 1
     while enemy1_hp <= 0 and enemy2_hp <= 0 and enemy3_hp <= 0:
       target = input('Who do you attack? (1/2/3)')
-      print('You attack '+target+ 'for ' +damage+'damage.')
+      print(f'You attack {target} for {damage} damage.')
       if target == '1':
         if enemy1_hp >= 1:
-          enemy1_hp = enemy1_hp - damage
+          enemy1_hp -= damage
+          if enemy1_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy1_hp}')
         else:
           print('1 is already dead.')
       if target == '2':
         if enemy2_hp >= 1:
-          enemy2_hp = enemy2_hp - damage
+          enemy2_hp -= damage
+          if enemy2_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy2_hp}')
         else:
           print('2 is already dead.')
       if target == '3':
         if enemy3_hp >= 1:
-          enemy3_hp = enemy3_hp - damage
+          enemy3_hp -= damage
+          if enemy3_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy3_hp}')
         else:
           print('3 is already dead.')
       print('You won!')
@@ -53,19 +62,25 @@ def fight(number):
     enemy2_hp = 25
     enemy2_damage = list1[randrange(2)]
     if 'armor' == ['Cloth']:
-      enemy1_damage = enemy1_damage - 1
-      enemy2_damage = enemy2_damage - 1
+      enemy1_damage -= 1
+      enemy2_damage -= 1
     while enemy1_hp <= 0 and enemy2_hp <= 0:
       target = input('Who do you attack? (1/2)')
-      print('You attack '+target+ 'for ' +damage+'damage.')
+      print(f'You attack {target} for {damage} damage.')
       if target == '1':
         if enemy1_hp >= 1:
-          enemy1_hp = enemy1_hp - damage
+          enemy1_hp -= damage
+          if enemy1_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy1_hp}')
         else:
           print('1 is already dead.')
       if target == '2':
         if enemy2_hp >= 1:
-          enemy2_hp = enemy2_hp - damage
+          enemy2_hp -= damage
+          if enemy1_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy2_hp}')
         else:
           print('2 is already dead.')
       print('You won!')
@@ -74,9 +89,13 @@ def fight(number):
     enemy1_hp = 40
     enemy1_damage = list1[randrange(5)]
     if 'armor' == ['Cloth']:
-      enemy1_damage = enemy1_damage - 1
+      enemy1_damage -= 1
     while enemy1_hp <= 0:
-      enemy1_hp = enemy1_hp - damage
+      enemy1_hp -= damage
+      if enemy1_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy1_hp}')
+      sleep(1)
     else:
       print('You Won!')
       success = 1
@@ -84,9 +103,13 @@ def fight(number):
     enemy1_hp = 65
     enemy1_damage = list1[randrange(7)]
     if 'armor' == ['Cloth']:
-      enemy1_damage = enemy1_damage - 1
+      enemy1_damage -= 1
     while enemy1_hp <= 0:
-      enemy1_hp = enemy1_hp - damage
+      enemy1_hp -= damage
+      if enemy1_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy1_hp}')
+      sleep(1)
     else:
       print('You Won!')
       success = 1
@@ -94,9 +117,13 @@ def fight(number):
     enemy1_hp = 90
     enemy1_damage = list1[randrange(9)]
     if 'armor' == ['Cloth']:
-      enemy1_damage = enemy1_damage - 1
+      enemy1_damage -= 1
     while enemy1_hp <= 0:
-      enemy1_hp = enemy1_hp - damage
+      enemy1_hp -= damage
+      if enemy1_hp == 0:
+            print('Kill!')
+          else print(f'Remaining hp: {enemy1_hp}')
+      sleep(1)
     else:
       print('You Won!')
       success = 1
@@ -104,8 +131,7 @@ def fight(number):
     print('Error!')
 print('Bartender- Welcome to my tavern! You must have come a long way.')
 sleep(1.5)
-one = input(
-    'Bartender- How about a drink? We have water and milk! 1-water 2-milk: ')
+one = input('Bartender- How about a drink? We have water and milk! 1-water 2-milk: ')
 if one == '1':
   cls()
   print('Bartender- Ok! One water coming right up!')
